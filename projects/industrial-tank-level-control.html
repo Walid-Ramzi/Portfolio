@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="projects.tank.title">Industrial Tank Level Control — Portfolio</title>
+  <meta name="description" content="Maintaining liquid level at setpoint via level measurement, control logic, and pump control using PID regulation in a PLC environment.">
+  <meta property="og:title" content="Industrial Tank Level Control — Portfolio">
+  <meta property="og:description" content="Maintaining liquid level at setpoint via level measurement, control logic, and pump control using PID regulation in a PLC environment.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230EA5E9'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='600'%3EE%3C/text%3E%3C/svg%3E">
+  <script>
+    // Applied synchronously, before CSS paints, so the page never flashes
+    // light-then-dark (or dark-then-light) on load.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { /* localStorage unavailable (private mode, etc.) — default to light */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/i18n.js"></script>
+</head>
+<body>
+
+  <header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html#hero">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 15h3M15 15h1"/><circle cx="9" cy="9" r="1"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Kachour Walid-Ramzi</span><span class="brand-title">Instrumentation &amp; Automation Engineer</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+      <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a href="../index.html#projects" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a href="../index.html#education" data-i18n="nav.education">Education</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="../assets/cv.pdf" class="btn btn-filled btn-small" download data-i18n="nav.downloadCV">Download CV</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-selector-wrap">
+        <label for="languageSelector" class="visually-hidden" data-i18n="language.selector">Language</label>
+        <select id="languageSelector" class="lang-select" aria-label="Select language">
+          <option value="en" data-i18n="language.en">English</option>
+          <option value="fr" data-i18n="language.fr">Français</option>
+          <option value="ar" data-i18n="language.ar">العربية</option>
+        </select>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="theme-toggle-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="theme-toggle-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="hamburger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav">
+  <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+  <a href="../index.html#about" data-i18n="nav.about">About</a>
+  <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+  <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+  <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+  <a href="../index.html#education" data-i18n="nav.education">Education</a>
+  <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+  <a href="../assets/cv.pdf" class="btn btn-filled" download data-i18n="nav.downloadCV">Download CV</a>
+</nav>
+
+<main>
+
+    <div class="container breadcrumb-wrap">
+      <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Home</a> / <a href="../index.html#projects" data-i18n="nav.projects">Projects</a> / <span data-i18n="projects.tank.breadcrumb">Industrial Tank Level Control</span></nav>
+    </div>
+
+    <section class="project-detail-header">
+      <div class="container">
+        <p class="section-kicker" data-i18n="projects.tank.eyebrow">Instrumentation · PID · Process Control</p>
+        <h1 data-i18n="projects.tank.title">Industrial Tank Level Control</h1>
+        <div class="project-detail-meta">
+          <span class="tag">Instrumentation</span>
+          <span class="tag">Level Measurement</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">PLC</span>
+          <span class="tag">Process Control</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="project-detail-hero fade-in">
+        <div class="detail-visual">
+          <div class="detail-visual-grid">
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.tank.n1t">Level transmitter</strong><span data-i18n="projectDetail.diagram.tank.n1s">Ultrasonic · 4–20 mA</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node primary"><strong data-i18n="projectDetail.diagram.tank.n2t">PLC + PID</strong><span data-i18n="projectDetail.diagram.tank.n2s">Siemens S7 · Setpoint</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.tank.n3t">Pump / Valve</strong><span data-i18n="projectDetail.diagram.tank.n3s">VSD · Outflow control</span></div>
+          </div>
+          <div style="height:1px;background:var(--line);margin:20px 0"></div>
+          <div style="text-align:center;font-size:12px;color:var(--muted)" data-i18n="projectDetail.diagram.tank.caption">Closed-loop level regulation · HMI monitoring</div>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.overview">Project Overview</h2>
+        <p data-i18n="projects.tank.detail.overview">This project focuses on maintaining the liquid level in an industrial storage tank at a defined setpoint. A level sensor continuously measures the tank's fill state, and a PLC implements PID control logic to regulate a pump, ensuring stable and accurate level management.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.objectives">Main Objectives</h2>
+        <p data-i18n="projects.tank.detail.objective">Design a control system that keeps the tank level within a narrow operating band despite varying inflow and outflow conditions, preventing overflow or underflow while minimizing pump cycling.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.summary">Solution</h2>
+        <p data-i18n="projects.tank.detail.solution">A ultrasonic level transmitter provides continuous measurement data to a Siemens PLC. A PID control loop processes the level signal and adjusts the pump output to maintain the setpoint. Proportional, integral, and derivative gains were tuned to achieve stable response without excessive oscillation.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.technologies">Technologies Used</h2>
+        <div class="tech-list">
+          <span class="tag">Instrumentation</span>
+          <span class="tag">Level Measurement</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">PLC</span>
+          <span class="tag">Process Control</span>
+          <span class="tag">Ultrasonic Sensor</span>
+          <span class="tag">PID Tuning</span>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.systemComponents">System Components</h2>
+        <ul class="component-list">
+          <li data-i18n="projectDetail.tankComponents.0">Ultrasonic level transmitter</li>
+          <li data-i18n="projectDetail.tankComponents.1">Siemens S7 PLC with analog input module</li>
+          <li data-i18n="projectDetail.tankComponents.2">Pump with variable speed drive</li>
+          <li data-i18n="projectDetail.tankComponents.3">Control valve for outflow regulation</li>
+          <li data-i18n="projectDetail.tankComponents.4">Analog signal conditioning hardware</li>
+          <li data-i18n="projectDetail.tankComponents.5">HMI for setpoint adjustment and monitoring</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.development">Development Process</h2>
+        <p data-i18n="projects.tank.detail.approach">The project began with process characterization — identifying the tank's dynamics, response times, and disturbance sources. The PID parameters were tuned systematically: starting with proportional-only control, then adding integral action to eliminate steady-state error, and finally adjusting derivative to improve settling time. Simulation in Factory I/O validated the control strategy before physical commissioning.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.learnings">What I Learned</h2>
+        <ul class="results-list">
+          <li data-i18n="projectDetail.tankLearnings.0">Achieved stable level control within ±2% of setpoint under variable conditions</li>
+          <li data-i18n="projectDetail.tankLearnings.1">Reduced pump wear through optimized cycling strategies</li>
+          <li data-i18n="projectDetail.tankLearnings.2">Developed practical PID tuning methodology for level control loops</li>
+          <li data-i18n="projectDetail.tankLearnings.3">Strengthened understanding of analog signal processing in PLC environments</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.gallery">Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.tank.0">P&ID — Tank Control Diagram</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.tank.1">PLC — PID Function Block</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.tank.2">HMI — Level Monitoring Screen</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.tank.3">Factory I/O — Simulation View</div>
+        </div>
+      </div>
+
+      <div style="margin: 48px 0;">
+        <a href="../index.html#projects" class="btn btn-outlined" data-i18n="projectDetail.back">← Back to Projects</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name" data-i18n="footer.name">Kachour Walid-Ramzi</span><span class="footer-brand-title">Instrumentation &amp; Automation Engineer</span></div>
+    <nav class="footer-links">
+      <a href="../index.html#about" data-i18n="footer.links.about">About</a>
+      <a href="../index.html#skills" data-i18n="footer.links.skills">Skills</a>
+      <a href="../index.html#projects" data-i18n="footer.links.projects">Projects</a>
+      <a href="../assets/cv.pdf" download data-i18n="footer.links.cv">CV</a>
+      <a href="../index.html#contact" data-i18n="footer.links.contact">Contact</a>
+    </nav>
+    <div class="footer-social"><a href="https://linkedin.com" target="_blank">in</a><a href="https://github.com" target="_blank">GH</a><a href="mailto:kachourwalidramzi@gmail.com">@</a></div>
+    <div class="footer-bottom" data-i18n="footer.copyright">2026 Kachour Walid-Ramzi. All rights reserved.</div>
+  </div>
+</footer>
+
+  <script src="../js/main.js"></script>
+</body>

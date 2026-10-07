@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="projects.bottling.title">Automated Bottling Plant — Portfolio</title>
+  <meta name="description" content="PLC-based sequencing system with sensors, actuators, and timers for an automated bottling production line using Siemens TIA Portal and Factory I/O.">
+  <meta property="og:title" content="Automated Bottling Plant — Portfolio">
+  <meta property="og:description" content="PLC-based sequencing system with sensors, actuators, and timers for an automated bottling production line using Siemens TIA Portal and Factory I/O.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230EA5E9'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='600'%3EE%3C/text%3E%3C/svg%3E">
+  <script>
+    // Applied synchronously, before CSS paints, so the page never flashes
+    // light-then-dark (or dark-then-light) on load.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { /* localStorage unavailable (private mode, etc.) — default to light */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/i18n.js"></script>
+</head>
+<body>
+
+  <header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html#hero">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 15h3M15 15h1"/><circle cx="9" cy="9" r="1"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Kachour Walid-Ramzi</span><span class="brand-title">Instrumentation &amp; Automation Engineer</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+      <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a href="../index.html#projects" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a href="../index.html#education" data-i18n="nav.education">Education</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="../assets/cv.pdf" class="btn btn-filled btn-small" download data-i18n="nav.downloadCV">Download CV</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-selector-wrap">
+        <label for="languageSelector" class="visually-hidden" data-i18n="language.selector">Language</label>
+        <select id="languageSelector" class="lang-select" aria-label="Select language">
+          <option value="en" data-i18n="language.en">English</option>
+          <option value="fr" data-i18n="language.fr">Français</option>
+          <option value="ar" data-i18n="language.ar">العربية</option>
+        </select>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="theme-toggle-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="theme-toggle-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="hamburger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav">
+  <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+  <a href="../index.html#about" data-i18n="nav.about">About</a>
+  <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+  <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+  <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+  <a href="../index.html#education" data-i18n="nav.education">Education</a>
+  <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+  <a href="../assets/cv.pdf" class="btn btn-filled" download data-i18n="nav.downloadCV">Download CV</a>
+</nav>
+
+<main>
+
+    <div class="container breadcrumb-wrap">
+      <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Home</a> / <a href="../index.html#projects" data-i18n="nav.projects">Projects</a> / <span data-i18n="projects.bottling.breadcrumb">Automated Bottling Plant</span></nav>
+    </div>
+
+    <section class="project-detail-header">
+      <div class="container">
+        <p class="section-kicker" data-i18n="projects.bottling.eyebrow">Automation · PLC · Factory I/O</p>
+        <h1 data-i18n="projects.bottling.title">Automated Bottling Plant</h1>
+        <div class="project-detail-meta">
+          <span class="tag">Siemens TIA Portal</span>
+          <span class="tag">PLC</span>
+          <span class="tag">Factory I/O</span>
+          <span class="tag">Sensors</span>
+          <span class="tag">Actuators</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="project-detail-hero fade-in">
+        <div class="detail-visual">
+          <div class="detail-visual-grid">
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.bottling.n1t">Sensors</strong><span data-i18n="projectDetail.diagram.bottling.n1s">Proximity · Photoelectric</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node primary"><strong data-i18n="projectDetail.diagram.bottling.n2t">Siemens S7 PLC</strong><span data-i18n="projectDetail.diagram.bottling.n2s">TIA Portal · Timers · Counters</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.bottling.n3t">Actuators</strong><span data-i18n="projectDetail.diagram.bottling.n3s">Conveyor · Cylinders · Capper</span></div>
+          </div>
+          <div style="height:1px;background:var(--line);margin:20px 0"></div>
+          <div style="text-align:center;font-size:12px;color:var(--muted)" data-i18n="projectDetail.diagram.bottling.caption">Factory I/O simulation · HMI operator screen</div>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.overview">Project Overview</h2>
+        <p data-i18n="projects.bottling.detail.overview">This project implements a PLC-based automation system for a bottling production line. The system coordinates sensor input, actuator output, and timing sequences to move containers through filling, capping, and labeling stages automatically.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.objectives">Main Objectives</h2>
+        <p data-i18n="projects.bottling.detail.objective">Design and program a control system that increases production reliability and reduces manual intervention on the bottling line. The system must handle container detection, liquid filling, cap application, and product count tracking.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.summary">Solution</h2>
+        <p data-i18n="projects.bottling.detail.solution">A Siemens PLC was programmed in TIA Portal to manage the full production sequence. Sensors detect container presence at each station, timers control fill duration, and actuators operate caps and labeling mechanisms. Factory I/O was used for simulation and visualization before deployment.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.technologies">Technologies Used</h2>
+        <div class="tech-list">
+          <span class="tag">Siemens TIA Portal</span>
+          <span class="tag">PLC Programming</span>
+          <span class="tag">Factory I/O</span>
+          <span class="tag">Sensors</span>
+          <span class="tag">Actuators</span>
+          <span class="tag">Timers</span>
+          <span class="tag">Industrial Automation</span>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.systemComponents">System Components</h2>
+        <ul class="component-list">
+          <li data-i18n="projectDetail.bottlingComponents.0">Siemens S7 PLC (CPU + I/O modules)</li>
+          <li data-i18n="projectDetail.bottlingComponents.1">Proximity sensors — container detection</li>
+          <li data-i18n="projectDetail.bottlingComponents.2">Photoelectric sensors — fill level monitoring</li>
+          <li data-i18n="projectDetail.bottlingComponents.3">Pneumatic cylinders — cap application</li>
+          <li data-i18n="projectDetail.bottlingComponents.4">Conveyor motor drives</li>
+          <li data-i18n="projectDetail.bottlingComponents.5">HMI panel for operator interface</li>
+          <li data-i18n="projectDetail.bottlingComponents.6">Timer and counter function blocks</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.development">Development Process</h2>
+        <p data-i18n="projects.bottling.detail.approach">The project followed a structured methodology: requirements analysis, system design in Factory I/O, PLC program development in TIA Portal, simulation testing, and final commissioning. Each production stage was mapped to a dedicated function block in the PLC program, enabling modular troubleshooting and future expansion.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.learnings">What I Learned</h2>
+        <ul class="results-list">
+          <li data-i18n="projectDetail.bottlingLearnings.0">Reduced manual operator intervention at the filling station</li>
+          <li data-i18n="projectDetail.bottlingLearnings.1">Implemented reliable container-count tracking across all stages</li>
+          <li data-i18n="projectDetail.bottlingLearnings.2">Gained practical experience with Siemens TIA Portal and Factory I/O simulation</li>
+          <li data-i18n="projectDetail.bottlingLearnings.3">Developed modular PLC programming practices using function blocks</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.gallery">Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.bottling.0">Factory I/O — Simulation View 1</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.bottling.1">Factory I/O — Simulation View 2</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.bottling.2">PLC Program — Ladder Logic</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.bottling.3">HMI — Operator Screen</div>
+        </div>
+      </div>
+
+      <div style="margin: 48px 0;">
+        <a href="../index.html#projects" class="btn btn-outlined" data-i18n="projectDetail.back">← Back to Projects</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name" data-i18n="footer.name">Kachour Walid-Ramzi</span><span class="footer-brand-title">Instrumentation &amp; Automation Engineer</span></div>
+    <nav class="footer-links">
+      <a href="../index.html#about" data-i18n="footer.links.about">About</a>
+      <a href="../index.html#skills" data-i18n="footer.links.skills">Skills</a>
+      <a href="../index.html#projects" data-i18n="footer.links.projects">Projects</a>
+      <a href="../assets/cv.pdf" download data-i18n="footer.links.cv">CV</a>
+      <a href="../index.html#contact" data-i18n="footer.links.contact">Contact</a>
+    </nav>
+    <div class="footer-social"><a href="https://linkedin.com" target="_blank">in</a><a href="https://github.com" target="_blank">GH</a><a href="mailto:kachourwalidramzi@gmail.com">@</a></div>
+    <div class="footer-bottom" data-i18n="footer.copyright">2026 Kachour Walid-Ramzi. All rights reserved.</div>
+  </div>
+</footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,960 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "kicker": "Instrumentation · Automation · IoT",
+    "title": "Instrumentation & <span>Automation</span> Engineer",
+    "lead": "Engineering graduate with a background in electronics and instrumentation, interested in industrial automation, process control, measurement systems and PLC-based solutions.",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download CV",
+    "availability": "Available for engineering opportunities",
+    "note": {
+      "flow": "SP → Σ → Controller → Actuator → Sensor (feedback)",
+      "specs": "4–20 mA · PID · I/O"
+    }
+  },
+  "controlLoop": {
+    "kicker": "Control Systems",
+    "title": "From measurement to feedback control.",
+    "subtitle": "An interactive view of the control concepts behind instrumentation, automation and PID systems.",
+    "live": "Live simulation",
+    "panel1": {
+      "index": "01",
+      "title": "High-Level Control Cycle",
+      "caption": "Sensor → Controller → Actuator → Process → Feedback",
+      "infoSensor": "Measures the process variable (PV) and converts it to a usable signal.",
+      "infoController": "Compares SP with PV, computes error, outputs control action.",
+      "infoActuator": "Final control element (valve, motor, heater) applies output to process.",
+      "infoProcess": "The physical process being controlled (tank, reactor, etc.)",
+      "nodeNameSensor": "Sensor",
+      "nodeNameController": "Controller",
+      "nodeNameActuator": "Actuator",
+      "nodeNameSetPoint": "Set Point",
+      "nodeNameFeedback": "SENSOR FEEDBACK"
+    },
+    "panel2": {
+      "index": "02",
+      "title": "Closed-Loop PID System",
+      "caption": "SP → Σ → PID → Actuator → Process → Sensor → PV → Σ (feedback)",
+      "infoPID": "Computes control output: P·e + I∫e + D·de/dt where e = SP - PV.",
+      "setPointTag": "SP",
+      "setPoint": "SET POINT",
+      "error": "ERR",
+      "pid": "PID",
+      "pidControllerTitle": "PID CONTROLLER",
+      "actuator": "ACTUATOR",
+      "actuatorSub": "HEATER",
+      "processTitle": "PROCESS / PLANT",
+      "processSub": "THERMAL CHAMBER",
+      "sensor": "SENSOR",
+      "sensorSub": "TEMPERATURE",
+      "feedback": "FEEDBACK",
+      "infoPIDTitle": "PID Controller",
+      "infoPIDDesc": "P + I + D",
+      "pidLoopType": "PID LOOP",
+      "explainToggle": "How is this calculated?",
+      "explainIntro": "The controller recalculates its output every cycle from five numbers. Here's the same math the diagram above is running, broken into steps, with the live values plugged in.",
+      "explainStep1Title": "Error — how far off the setpoint is",
+      "explainStep2Title": "Proportional (P) — reacts to the error right now",
+      "explainStep3Title": "Integral (I) — clears any long-term offset",
+      "explainStep4Title": "Derivative (D) — resists sudden changes",
+      "explainStep5Title": "Output — what actually drives the heater",
+      "explainClamp": "(clamped to 0–100%)"
+    }
+  },
+  "snapshot": {
+    "instrumentation": {
+      "title": "Instrumentation",
+      "desc": "Sensors, transmitters, measurement and 4–20 mA."
+    },
+    "automation": {
+      "title": "Automation",
+      "desc": "PLC concepts, TIA Portal, control logic and Factory I/O."
+    },
+    "control": {
+      "title": "Control",
+      "desc": "PID, process control, feedback systems and regulation."
+    },
+    "iot": {
+      "title": "IoT & Software",
+      "desc": "Raspberry Pi, Python, Flutter/Dart with Riverpod and Supabase, Firebase and Git."
+    }
+  },
+  "about": {
+    "kicker": "Profile",
+    "title": "About Me",
+    "p1": "I'm an Instrumentation & Automation Engineer based in Remchi, Tlemcen, Algeria. I hold a Bachelor's degree in Electronics (2023) and a Master's (M2) in Instrumentation (2026), both from Université Abou Bekr Belkaid, Tlemcen.",
+    "p2": "My final-year project, <strong>CoopMaster</strong>, is a smart automated poultry-coop system built around a Raspberry Pi, combining sensors, an automated door, camera monitoring and a companion Flutter app.",
+    "p3": "I'm preparing to enter the industrial automation and instrumentation field, with particular interest in oil & gas, power plants and process industries, while continuing to build practical skills in Siemens TIA Portal, Factory I/O and industrial control practices.",
+    "profile": {
+      "field": "Field",
+      "fieldValue": "Instrumentation & Automation Engineering",
+      "education": "Education",
+      "educationValue": "M2 Instrumentation · Licence Electronics",
+      "background": "Background",
+      "backgroundValue": "Industrial instrumentation, IoT-based control systems, Flutter app development",
+      "focus": "Focus",
+      "focusValue": "Sensor integration, PLC/SCADA, P&ID standards, process control",
+      "location": "Location",
+      "locationValue": "Remchi, Tlemcen, Algeria"
+    },
+    "p4": "In parallel, I build Flutter web applications with Supabase backends — including an e-commerce storefront with an admin dashboard and a multi-app delivery platform — which feeds back into how I design the software side of automation and monitoring systems."
+  },
+  "skills": {
+    "kicker": "Capabilities",
+    "title": "Technical Skills",
+    "subtitle": "A practical foundation across instrumentation, automation, control, electrical systems and software.",
+    "instrumentation": {
+      "title": "Instrumentation",
+      "tags": [
+        "Sensors",
+        "Temperature",
+        "Pressure",
+        "Level",
+        "Flow",
+        "Transmitters",
+        "4–20 mA",
+        "Measurement"
+      ]
+    },
+    "automation": {
+      "title": "Automation & PLC",
+      "tags": [
+        "PLC",
+        "Siemens TIA Portal",
+        "Factory I/O",
+        "Digital I/O",
+        "Control Logic",
+        "HMI Concepts"
+      ]
+    },
+    "control": {
+      "title": "Control Systems",
+      "tags": [
+        "PID",
+        "Process Control",
+        "Feedback Systems",
+        "Digital Regulation",
+        "Control Loops"
+      ]
+    },
+    "electrical": {
+      "title": "Electrical & Engineering",
+      "tags": [
+        "Motors",
+        "Actuators",
+        "Relays",
+        "Contactors",
+        "Control Circuits",
+        "P&ID",
+        "Technical Documentation"
+      ]
+    }
+  },
+  "projects": {
+    "kicker": "Selected work",
+    "title": "Engineering Projects",
+    "subtitle": "Projects that connect sensors, control logic, software and real-world automation.",
+    "bottling": {
+      "eyebrow": "Automation · PLC · Factory I/O",
+      "title": "Automated Bottling Plant",
+      "desc": "An automated bottling process demonstrating PLC sequencing, sensors, actuators, timers and industrial automation logic.",
+      "tags": [
+        "TIA Portal",
+        "PLC",
+        "Factory I/O"
+      ],
+      "link": "View case study",
+      "detail": {
+        "overview": "This project implements a PLC-based automation system for a bottling production line.",
+        "objective": "Design and program a control system that increases production reliability and reduces manual intervention.",
+        "solution": "A Siemens PLC was programmed in TIA Portal to manage the full production sequence.",
+        "approach": "The project followed a structured methodology."
+      },
+      "breadcrumb": "Automated Bottling Plant"
+    },
+    "tank": {
+      "eyebrow": "Instrumentation · PID · PLC",
+      "title": "Industrial Tank Level Control",
+      "desc": "A process-control project focused on maintaining liquid level at a defined setpoint using level measurement, control logic and a pump.",
+      "tags": [
+        "Level Sensor",
+        "PID",
+        "PLC"
+      ],
+      "link": "View case study",
+      "detail": {
+        "overview": "This project focuses on maintaining the liquid level in an industrial storage tank at a defined setpoint.",
+        "objective": "Design a control system that keeps the tank level within a narrow operating band.",
+        "solution": "A ultrasonic level transmitter provides continuous measurement data to a Siemens PLC.",
+        "approach": "The project began with process characterization."
+      },
+      "breadcrumb": "Industrial Tank Level Control"
+    },
+    "coopmaster": {
+      "eyebrow": "PFE · IoT · Embedded",
+      "title": "CoopMaster — Smart Connected Poultry Coop",
+      "desc": "A Raspberry Pi-based automation system combining sensors, actuators, camera monitoring and a Flutter companion app.",
+      "tags": [
+        "Raspberry Pi 5",
+        "Python",
+        "Flutter"
+      ],
+      "link": "View case study",
+      "detail": {
+        "overview": "CoopMaster is a smart connected poultry-coop automation and monitoring system developed as an engineering graduation project. The objective was to design a low-cost, practical, and reliable solution capable of monitoring important environmental conditions inside a poultry coop while automating several repetitive tasks that normally require manual intervention. The project combines embedded systems, industrial-style automation, sensors, actuators, networking, cloud services, mobile application development, and local safety mechanisms into one integrated system. Rather than treating the poultry coop as a simple IoT demonstration, CoopMaster was designed around an engineering principle: the system should remain useful and safe even when the network or cloud service is unavailable. The system uses a Raspberry Pi 5 as the main local controller, Python for hardware and automation logic, sensors for monitoring, relays and actuators for physical control, Firebase for cloud synchronization, and a Flutter application for remote monitoring.",
+        "problem": {
+          "title": "The Problem",
+          "intro": "Traditional small poultry coops often require the owner to manually perform several repetitive tasks. Depending on the installation, the owner may need to:",
+          "tasks": [
+            "Check whether the coop door is open or closed",
+            "Open or close the entrance manually",
+            "Monitor environmental conditions",
+            "Check whether rain is occurring before opening an external entrance",
+            "Activate or deactivate watering equipment",
+            "Monitor the general operating state of the installation",
+            "React to abnormal conditions",
+            "Visit the coop physically to verify that equipment is operating correctly"
+          ],
+          "challenge": "The main challenge was designing a system in which: Sensors provide information → the controller interprets that information → automation logic makes decisions → actuators execute the required actions → the system reports its state to the user. This creates a complete closed-loop automation architecture."
+        },
+        "objectives": {
+          "title": "Main Objectives",
+          "items": [
+            "Environmental and state monitoring — collect information from sensors and determine the current state",
+            "Automatic door management — open and close the entrance automatically according to predefined conditions",
+            "Rain-aware operation — detect rain conditions and use this information to avoid inappropriate door operation",
+            "Motion detection — use a PIR sensor to detect movement in the monitored area",
+            "Watering control — control a water pump to activate watering-related equipment without direct manual operation",
+            "Remote monitoring — monitor through a graphical mobile interface",
+            "Local operation — retain essential functionality when Internet connectivity is unavailable",
+            "Safety — avoid blindly commanding actuators without verifying the state of the installation",
+            "Low-cost implementation — use accessible and relatively inexpensive components while applying engineering principles"
+          ]
+        },
+        "architecture": {
+          "title": "System Architecture",
+          "intro": "CoopMaster is organized into several interconnected layers.",
+          "layers": {
+            "physical": {
+              "title": "1. Physical Layer",
+              "desc": "Contains the real-world sensors and actuators. Sensors transform physical events into electrical signals that can be interpreted by the controller.",
+              "sensors": [
+                "PIR motion sensor",
+                "Rain sensor",
+                "Door-position/end-state sensors"
+              ]
+            },
+            "control": {
+              "title": "2. Control Layer",
+              "desc": "The Raspberry Pi 5 acts as the main local controller. It reads sensor inputs, processes sensor states, executes automation rules, controls actuators, monitors equipment states, handles local safety logic, communicates with the cloud layer, and provides information to the user interface.",
+              "responsibilities": [
+                "Reading sensor inputs",
+                "Processing sensor states",
+                "Executing automation rules",
+                "Controlling actuators",
+                "Monitoring equipment states",
+                "Handling local safety logic",
+                "Communicating with the cloud layer",
+                "Providing information to the user interface"
+              ]
+            },
+            "software": {
+              "title": "3. Software Layer",
+              "desc": "The local control software was developed using Python. The raw GPIO states are converted into meaningful logical information.",
+              "responsibilities": [
+                "Sensor acquisition",
+                "Signal interpretation",
+                "Automation logic",
+                "Cloud communication",
+                "User interface support"
+              ]
+            },
+            "actuator": {
+              "title": "4. Actuator Layer",
+              "desc": "The controller communicates with physical actuators through appropriate switching interfaces. Relay interfaces separate low-power control signals from higher-power actuator circuits.",
+              "equipment": [
+                "Door motor/actuation system",
+                "Water pump",
+                "Relay-controlled outputs"
+              ]
+            }
+          }
+        },
+        "gpio": {
+          "title": "GPIO Configuration",
+          "intro": "An important aspect of the prototype was defining a clear mapping between the Raspberry Pi GPIO pins and the physical devices.",
+          "table": {
+            "headers": [
+              "GPIO",
+              "Device",
+              "Function"
+            ],
+            "rows": [
+              [
+                "GPIO 5",
+                "PIR sensor",
+                "Motion detection"
+              ],
+              [
+                "GPIO 8",
+                "Rain sensor",
+                "Rain detection"
+              ],
+              [
+                "GPIO 7",
+                "Door relay",
+                "Door opening command"
+              ],
+              [
+                "GPIO 11",
+                "Door relay",
+                "Door closing command"
+              ],
+              [
+                "GPIO 25",
+                "Door state sensor",
+                "Position/state feedback"
+              ],
+              [
+                "GPIO 9",
+                "Door state sensor",
+                "Position/state feedback"
+              ],
+              [
+                "GPIO 10",
+                "Water control",
+                "Watering control signal"
+              ],
+              [
+                "GPIO 24",
+                "Pump",
+                "Pump activation"
+              ]
+            ],
+            "note": "The exact electrical implementation is separated from the software logic through the GPIO abstraction, making it easier to change hardware later."
+          }
+        },
+        "doorAutomation": {
+          "title": "Door Automation",
+          "intro": "One of the main functions of CoopMaster is automated door control. The door system is not treated as a simple OPEN = motor ON logic.",
+          "flow": [
+            "User/automation requests OPEN",
+            "Controller verifies current state",
+            "Opening relay activated",
+            "Motor moves door",
+            "Position sensor provides feedback",
+            "Controller detects target state",
+            "Motor command stopped"
+          ],
+          "note": "This feedback-based architecture is important because an automation controller should ideally know whether the commanded action actually occurred."
+        },
+        "safety": {
+          "title": "Door Safety Logic",
+          "intro": "Safety was one of the most important design considerations. A naive implementation could simply activate a motor for a fixed amount of time, but this creates several problems.",
+          "approach": "Instead of relying only on time, the system uses sensor information to determine whether the door has reached its intended state. This represents an important transition from simple remote control toward feedback-based automation.",
+          "states": [
+            "Requested state",
+            "Commanded state",
+            "Feedback state",
+            "Actual operating condition"
+          ]
+        },
+        "rainDetection": {
+          "title": "Rain Detection",
+          "intro": "The rain sensor provides information about the external environmental condition. The controller can use this information as part of the automation decision. Conceptually: Rain sensor → Raspberry Pi → Automation logic → Door decision."
+        },
+        "motionDetection": {
+          "title": "Motion Detection",
+          "intro": "A PIR sensor is used to detect movement. The sensor is connected to GPIO 5. The PIR signal allows the controller to determine whether motion has been detected in the monitored area."
+        },
+        "pumpControl": {
+          "title": "Water Pump Control",
+          "intro": "CoopMaster also includes control of a watering system. The water-related control path uses: Controller → switching interface → pump. The pump can therefore be activated by software rather than requiring direct manual switching."
+        },
+        "localFirst": {
+          "title": "Local-First Architecture",
+          "intro": "One of the strongest engineering concepts in CoopMaster is its local-first architecture. Many IoT projects depend heavily on cloud services. If the Internet connection disappears, critical automation may stop functioning.",
+          "cloudDependent": "Sensor → Internet → Cloud → Application → Internet → Controller → Actuator",
+          "coopmasterLocal": "Sensor → Raspberry Pi → Local automation → Actuator",
+          "separation": {
+            "critical": [
+              "Sensor reading",
+              "Automation logic",
+              "Door control",
+              "Pump control",
+              "Safety logic"
+            ],
+            "connected": [
+              "Remote monitoring",
+              "Data synchronization",
+              "User interface",
+              "Remote interaction",
+              "Cloud-based information storage"
+            ]
+          }
+        },
+        "firebase": {
+          "title": "Firebase Integration",
+          "intro": "Firebase is used as the cloud connectivity layer. The Raspberry Pi communicates relevant system information to the cloud, while the Flutter application can use that information to provide the user with a remote view of the installation."
+        },
+        "flutter": {
+          "title": "Flutter Mobile Application",
+          "intro": "A dedicated application was developed using Flutter. The application provides a graphical interface for interacting with the CoopMaster system. Instead of requiring the user to understand GPIO states, relay states, or Python processes, the application translates the technical information into a more understandable interface.",
+          "features": [
+            "System status — a quick overview of the current installation state",
+            "Door control — the user can request opening or closing",
+            "Sensor information",
+            "Equipment status",
+            "Remote monitoring"
+          ]
+        },
+        "comms": {
+          "title": "Hardware-to-Software Communication",
+          "intro": "One of the most important aspects of CoopMaster is the complete communication chain between the physical world and the software. For example, consider the rain sensor:",
+          "chain": [
+            "Physical event — Rain begins",
+            "Sensor — The rain sensor changes its electrical state",
+            "Raspberry Pi — The GPIO input detects the change",
+            "Python — The Python control program interprets the signal",
+            "Automation logic — The system determines what action should be taken",
+            "Actuator — The relevant relay/motor state is controlled",
+            "Firebase — The updated state can be synchronized",
+            "Flutter — The user can see the updated condition in the application"
+          ]
+        },
+        "engineering": {
+          "title": "Engineering Control Philosophy",
+          "intro": "Although CoopMaster is a small-scale project, its architecture follows principles found in industrial automation. The fundamental chain is: SENSOR → CONTROLLER → ACTUATOR.",
+          "understanding": "The project demonstrates an understanding that automation is not simply about writing code or switching a motor. It requires understanding the relationship between physical processes, sensors, electrical signals, controllers, actuators, feedback, communication, safety, and user interfaces."
+        },
+        "instrumentation": {
+          "title": "Instrumentation Perspective",
+          "intro": "From an instrumentation perspective, CoopMaster can be viewed as a small process-control installation. The physical environment represents the process. Sensors provide measurements or states. The Raspberry Pi acts as the control unit. Relays and motors provide the actuation layer. The Flutter application acts as the supervisory/user interface. Firebase provides the communication and remote data layer.",
+          "architecture": "PROCESS → SENSORS → SIGNAL ACQUISITION → CONTROLLER → CONTROL LOGIC → ACTUATORS → PROCESS, with an additional monitoring path: CONTROLLER → CLOUD → USER APPLICATION."
+        },
+        "safetyPhilosophy": {
+          "title": "Safety Philosophy",
+          "intro": "Safety was considered at both the software and system levels. The system should not assume that a command was successfully executed simply because a command was sent.",
+          "distinction": "Command: CLOSE DOOR does not automatically mean Door = CLOSED. The system should use feedback to determine the actual state. This distinction between commanded state and actual state is an important engineering concept.",
+          "states": [
+            "Requested state",
+            "Commanded state",
+            "Feedback state",
+            "Actual operating condition"
+          ]
+        },
+        "fault": {
+          "title": "Fault and Connectivity Considerations",
+          "intro": "A major consideration in the architecture was the possibility of communication failure. Internet connectivity can be interrupted for many reasons. Therefore, critical local functions should not depend on constant cloud availability.",
+          "cloudFailure": "Remote monitoring may be temporarily unavailable, but the local automation can continue.",
+          "localFailure": "This is more serious because the controller is responsible for physical automation."
+        },
+        "raspberryPi": {
+          "title": "Why Raspberry Pi?",
+          "intro": "The Raspberry Pi 5 was selected as the main controller because it provides a useful balance between processing capability, GPIO access, Linux environment, Python compatibility, networking, development flexibility, low cost, and availability.",
+          "distinction": "A Raspberry Pi is not automatically equivalent to an industrial PLC. A PLC is designed specifically for industrial environments, deterministic control, electrical robustness, maintenance, and industrial communication."
+        },
+        "technologies": {
+          "title": "Technologies Used",
+          "hardware": [
+            "Raspberry Pi 5",
+            "PIR motion sensor",
+            "Rain sensor",
+            "Door-position/state sensors",
+            "Relay modules",
+            "Door motor/actuator",
+            "Water pump",
+            "Electrical wiring and power interfaces"
+          ],
+          "software": [
+            "Python",
+            "Flutter",
+            "Firebase",
+            "GPIO-based hardware control",
+            "Linux/Raspberry Pi environment"
+          ],
+          "concepts": [
+            "Embedded systems",
+            "Automation",
+            "Instrumentation",
+            "Sensor acquisition",
+            "Actuator control",
+            "Feedback",
+            "IoT",
+            "Cloud synchronization",
+            "Local-first architecture",
+            "Remote monitoring",
+            "Safety-oriented control"
+          ]
+        },
+        "development": {
+          "title": "Development Process",
+          "intro": "The project was approached as an integrated engineering system rather than as isolated software and hardware tasks.",
+          "steps": [
+            {
+              "step": "Step 1 — Identify the problem",
+              "desc": "The first stage involved identifying repetitive manual operations that could benefit from automation."
+            },
+            {
+              "step": "Step 2 — Define the system architecture",
+              "desc": "The hardware and software components were organized into separate layers."
+            },
+            {
+              "step": "Step 3 — Hardware integration",
+              "desc": "The sensors and actuators were connected to the Raspberry Pi GPIO system."
+            },
+            {
+              "step": "Step 4 — Develop the local controller",
+              "desc": "Python was used to implement the local automation logic."
+            },
+            {
+              "step": "Step 5 — Implement automation logic",
+              "desc": "The automation rules were implemented so that sensor information could influence actuator behavior."
+            },
+            {
+              "step": "Step 6 — Add cloud communication",
+              "desc": "Firebase was integrated to synchronize system information and enable remote access."
+            },
+            {
+              "step": "Step 7 — Develop the Flutter application",
+              "desc": "A user interface was created to make the system understandable to a non-technical user."
+            },
+            {
+              "step": "Step 8 — Testing and refinement",
+              "desc": "The system was tested by observing the interaction between all components."
+            }
+          ]
+        },
+        "challenges": {
+          "title": "Challenges",
+          "intro": "The project involved several engineering challenges.",
+          "items": [
+            {
+              "title": "Hardware/software integration",
+              "desc": "Working with physical hardware introduces problems that do not exist in purely software projects."
+            },
+            {
+              "title": "Actuator control",
+              "desc": "Motors and pumps cannot be connected directly to Raspberry Pi GPIO pins."
+            },
+            {
+              "title": "Feedback",
+              "desc": "Controlling a motor is relatively simple. Knowing when to stop it safely is more complicated."
+            },
+            {
+              "title": "Connectivity",
+              "desc": "Cloud-based systems introduce network dependency."
+            },
+            {
+              "title": "Multiple technologies",
+              "desc": "CoopMaster combines several technologies: Python + Raspberry Pi + GPIO + Firebase + Flutter."
+            }
+          ]
+        },
+        "learned": {
+          "title": "What I Learned",
+          "intro": "CoopMaster provided practical experience across several engineering areas.",
+          "areas": [
+            {
+              "title": "Instrumentation",
+              "desc": "The project strengthened understanding of sensors, signal acquisition, digital inputs, equipment states, feedback, and measurement systems."
+            },
+            {
+              "title": "Automation",
+              "desc": "The project introduced practical experience with control logic, sequential operations, interlocks, feedback, actuator control, and state-based automation."
+            },
+            {
+              "title": "Embedded systems",
+              "desc": "The project provided experience with Raspberry Pi, GPIO, hardware interfaces, sensor integration, relay control, and physical debugging."
+            },
+            {
+              "title": "Software engineering",
+              "desc": "The project involved Python development, Flutter development, application architecture, hardware/software communication, and cloud integration."
+            },
+            {
+              "title": "IoT",
+              "desc": "The project demonstrated the complete IoT pipeline: Physical world → sensors → local processing → cloud → application."
+            }
+          ]
+        },
+        "skills": {
+          "title": "Engineering Skills Demonstrated",
+          "intro": "CoopMaster demonstrates practical experience in:",
+          "items": [
+            "Embedded control",
+            "Sensor integration",
+            "Actuator control",
+            "GPIO programming",
+            "Python",
+            "Raspberry Pi",
+            "Flutter",
+            "Firebase",
+            "IoT architecture",
+            "Remote monitoring",
+            "Feedback-based control",
+            "Relay control",
+            "Hardware/software integration",
+            "Local-first architecture",
+            "System troubleshooting",
+            "Automation logic",
+            "Technical system design"
+          ]
+        },
+        "summary": {
+          "title": "Project Architecture Summary",
+          "intro": "The complete system can be summarized as:",
+          "flow": [
+            "Sensors (PIR, Rain, Door state)",
+            "Raspberry Pi 5 (GPIO acquisition, Python logic, Automation, Safety logic)",
+            "Actuators (Door motor, Water pump, Relays)",
+            "Firebase (Synchronizing, Remote data)",
+            "Flutter App (Monitoring, Controls, Status)"
+          ]
+        },
+        "controlFlow": {
+          "title": "Local-First Control Flow",
+          "intro": "The most important control path is the local loop:",
+          "localFlow": [
+            "Sensor",
+            "GPIO",
+            "Raspberry Pi",
+            "Python",
+            "Automation Logic",
+            "Safety / State Verification",
+            "Relay",
+            "Actuator",
+            "Physical Process",
+            "Feedback Sensor",
+            "Raspberry Pi"
+          ],
+          "cloudFlow": [
+            "Raspberry Pi",
+            "Firebase",
+            "Flutter App",
+            "User"
+          ]
+        },
+        "portfolio": {
+          "title": "Portfolio Case Study",
+          "intro": "CoopMaster represents the type of project that demonstrates more than theoretical knowledge. It combines several disciplines into one working system."
+        },
+        "future": {
+          "title": "Future Improvements",
+          "intro": "Although the prototype successfully demonstrates the core concept, several improvements could make the system more robust.",
+          "items": [
+            {
+              "title": "Industrial controller migration",
+              "desc": "The Raspberry Pi could eventually be replaced or complemented by an industrial PLC."
+            },
+            {
+              "title": "ESP32-C3 version",
+              "desc": "A future version could use an ESP32-C3 for selected sensor/actuator tasks."
+            },
+            {
+              "title": "Improved industrial communication",
+              "desc": "Future versions could investigate Modbus RTU, Modbus TCP, MQTT, RS-485, and Industrial Ethernet."
+            },
+            {
+              "title": "More sensors",
+              "desc": "Additional sensors could monitor temperature, humidity, water level, feed level, light level, electrical consumption, and motor current."
+            },
+            {
+              "title": "Historical data",
+              "desc": "Firebase or another database could store long-term measurements."
+            },
+            {
+              "title": "Alarm management",
+              "desc": "A future version could introduce an alarm system for abnormal conditions."
+            },
+            {
+              "title": "Predictive maintenance",
+              "desc": "With enough historical data, the system could identify abnormal equipment behavior."
+            }
+          ]
+        },
+        "finalSummary": {
+          "title": "Final Project Summary",
+          "text": "CoopMaster is a connected smart poultry-coop automation system designed to demonstrate how embedded electronics, instrumentation, automation, cloud technologies, and software development can be combined to solve a practical real-world problem. The most important architectural decision is the use of a local-first control philosophy."
+        }
+      }
+    },
+    "future": {
+      "eyebrow": "Automation · System Design · Control Strategy",
+      "title": "Industrial Automation Project",
+      "desc": "A comprehensive industrial automation case study covering system design, component selection and control strategy for a manufacturing process.",
+      "tags": [
+        "Automation",
+        "System Design",
+        "Control Strategy"
+      ],
+      "link": "View case study",
+      "detail": {
+        "overview": "This project presents a comprehensive industrial automation case study.",
+        "objective": "Design a complete automation system for an industrial process.",
+        "solution": "A modular control architecture was designed using PLC-based logic.",
+        "approach": "The project followed a systems engineering approach."
+      },
+      "breadcrumb": "Industrial Automation Project",
+      "caption": "Sensing · Control · Actuation"
+    }
+  },
+  "experience": {
+    "kicker": "Background",
+    "title": "Experience",
+    "subtitle": "Academic projects and industrial exposure that shaped my engineering foundation.",
+    "items": [
+      {
+        "year": "2026",
+        "role": "Master's Final-Year Project — CoopMaster",
+        "company": "Université Abou Bekr Belkaid, Tlemcen",
+        "desc": "Developed an IoT-based smart automated poultry-coop system centered on a Raspberry Pi 5, with sensor-driven monitoring, an automated door, camera surveillance and a Flutter app. Submitted as a Startup-track final-year project under Ministerial Order (Arré) 1275."
+      },
+      {
+        "year": "Jan – Feb 2025",
+        "role": "Engineering Intern",
+        "company": "Khenteur Composants Automobile",
+        "desc": "15-day internship at an Algerian manufacturer of automotive aftermarket spare parts. Hands-on work assembling components and sensors, including soldering on electronic parts."
+      },
+      {
+        "year": "April 2022",
+        "role": "Engineering Intern",
+        "company": "S.A.R.L Briqueterie de la Tafna",
+        "desc": "4-day introductory internship at a brick manufacturer, gaining early exposure to industrial production processes."
+      }
+    ]
+  },
+  "education": {
+    "kicker": "Academic background",
+    "title": "Education",
+    "subtitle": "Academic training in instrumentation and electronics.",
+    "items": [
+      {
+        "degree": "Master 2 (M2) — Instrumentation",
+        "school": "Université Abou Bekr Belkaid, Tlemcen",
+        "subjects": "Industrial Instrumentation, Sensors & Measurement, Control Systems, PLC/SCADA Systems, P&ID Standards, Automation",
+        "year": "Completed 2026"
+      },
+      {
+        "degree": "Licence — Electronics",
+        "school": "Université Abou Bekr Belkaid, Tlemcen",
+        "subjects": "Electronics, Circuit Analysis, Digital Systems, Microcontrollers, Signal Processing",
+        "year": "Completed 2023"
+      }
+    ]
+  },
+  "tools": {
+    "kicker": "Toolkit",
+    "title": "Tools & Technologies",
+    "subtitle": "Software and platforms used across engineering, embedded and development work.",
+    "tags": [
+      "Python",
+      "Raspberry Pi",
+      "Flutter / Dart",
+      "Firebase",
+      "Git / GitHub",
+      "Supabase",
+      "Riverpod / GoRouter"
+    ],
+    "learning": [
+      "Siemens TIA Portal · learning",
+      "Factory I/O · learning"
+    ],
+    "note": "TIA Portal and Factory I/O are shown as learning areas to keep the portfolio accurate about current experience."
+  },
+  "cv": {
+    "title": "Looking for my next engineering opportunity.",
+    "desc": "Interested in roles involving instrumentation, industrial automation, electrical systems, process control and related engineering fields.",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Let's Connect",
+    "desc": "For professional opportunities, engineering projects or collaboration, feel free to reach out.",
+    "email": "kachourwalidramzi@gmail.com",
+    "phone": "+213 781 811 940",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "location": "Remchi, Tlemcen, Algeria",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the opportunity or project.",
+      "submit": "Send Message",
+      "note": "The form opens your email application with the message prepared for sending."
+    }
+  },
+  "footer": {
+    "name": "Kachour Walid-Ramzi",
+    "title": "Instrumentation & Automation Engineer",
+    "links": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "cv": "CV",
+      "contact": "Contact"
+    },
+    "copyright": "© 2026 Kachour Walid-Ramzi. All rights reserved."
+  },
+  "language": {
+    "selector": "Language",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  },
+  "projectDetail": {
+    "back": "Back to projects",
+    "overview": "Project Overview",
+    "problem": "The Problem",
+    "objectives": "Main Objectives",
+    "architecture": "System Architecture",
+    "sensors": "Sensors",
+    "controlLayer": "Control Layer",
+    "softwareLayer": "Software Layer",
+    "actuatorLayer": "Actuator Layer",
+    "gpioConfig": "GPIO Configuration",
+    "doorAutomation": "Door Automation",
+    "safety": "Safety Logic",
+    "rainDetection": "Rain Detection",
+    "motionDetection": "Motion Detection",
+    "pumpControl": "Water Pump Control",
+    "localFirst": "Local-First Architecture",
+    "firebase": "Firebase Integration",
+    "flutter": "Flutter Mobile Application",
+    "appConcept": "Application Concept",
+    "comms": "Hardware-to-Software Communication",
+    "engineering": "Engineering Control Philosophy",
+    "instrumentation": "Instrumentation Perspective",
+    "safetyPhilosophy": "Safety Philosophy",
+    "fault": "Fault & Connectivity",
+    "raspberryPi": "Why Raspberry Pi?",
+    "technologies": "Technologies Used",
+    "development": "Development Process",
+    "challenges": "Challenges",
+    "learned": "What I Learned",
+    "skills": "Engineering Skills Demonstrated",
+    "summary": "Project Architecture Summary",
+    "controlFlow": "Local-First Control Flow",
+    "portfolio": "Portfolio Case Study",
+    "future": "Future Improvements",
+    "finalSummary": "Final Project Summary",
+    "readMore": "Read more",
+    "viewDetails": "View details",
+    "close": "Close",
+    "loading": "Loading...",
+    "systemComponents": "System Components",
+    "gallery": "Gallery",
+    "learnings": "What I Learned",
+    "galleryItems": {
+      "tank": [
+        "P&ID — Tank Control Diagram",
+        "PLC — PID Function Block",
+        "HMI — Level Monitoring Screen",
+        "Factory I/O — Simulation View"
+      ],
+      "bottling": [
+        "Factory I/O — Simulation View 1",
+        "Factory I/O — Simulation View 2",
+        "PLC Program — Ladder Logic",
+        "HMI — Operator Screen"
+      ],
+      "automation": [
+        "System Architecture Diagram",
+        "I/O List — Sensor & Actuator Map",
+        "PLC — Program Structure",
+        "HMI — Overview Screen"
+      ]
+    },
+    "tankComponents": [
+      "Ultrasonic level transmitter",
+      "Siemens S7 PLC with analog input module",
+      "Pump with variable speed drive",
+      "Control valve for outflow regulation",
+      "Analog signal conditioning hardware",
+      "HMI for setpoint adjustment and monitoring"
+    ],
+    "bottlingComponents": [
+      "Siemens S7 PLC (CPU + I/O modules)",
+      "Proximity sensors — container detection",
+      "Photoelectric sensors — fill level monitoring",
+      "Pneumatic cylinders — cap application",
+      "Conveyor motor drives",
+      "HMI panel for operator interface",
+      "Timer and counter function blocks"
+    ],
+    "automationComponents": [
+      "Central PLC with distributed remote I/O stations",
+      "HMI touchscreen panel",
+      "Industrial Ethernet communication network",
+      "Proximity and photoelectric sensors",
+      "Variable frequency drives for motor control",
+      "Pneumatic and hydraulic actuators",
+      "Safety relay circuit"
+    ],
+    "tankLearnings": [
+      "Achieved stable level control within ±2% of setpoint under variable conditions",
+      "Reduced pump wear through optimized cycling strategies",
+      "Developed practical PID tuning methodology for level control loops",
+      "Strengthened understanding of analog signal processing in PLC environments"
+    ],
+    "bottlingLearnings": [
+      "Reduced manual operator intervention at the filling station",
+      "Implemented reliable container-count tracking across all stages",
+      "Gained practical experience with Siemens TIA Portal and Factory I/O simulation",
+      "Developed modular PLC programming practices using function blocks"
+    ],
+    "automationLearnings": [
+      "Developed a complete automation architecture from requirements specification",
+      "Strengthened understanding of system integration and multi-station coordination",
+      "Gained experience with industrial communication protocols and network design",
+      "Produced comprehensive technical documentation for system commissioning"
+    ],
+    "diagram": {
+      "bottling": {
+        "n1t": "Sensors",
+        "n1s": "Proximity · Photoelectric",
+        "n2t": "Siemens S7 PLC",
+        "n2s": "TIA Portal · Timers · Counters",
+        "n3t": "Actuators",
+        "n3s": "Conveyor · Cylinders · Capper",
+        "caption": "Factory I/O simulation · HMI operator screen"
+      },
+      "tank": {
+        "n1t": "Level transmitter",
+        "n1s": "Ultrasonic · 4–20 mA",
+        "n2t": "PLC + PID",
+        "n2s": "Siemens S7 · Setpoint",
+        "n3t": "Pump / Valve",
+        "n3s": "VSD · Outflow control",
+        "caption": "Closed-loop level regulation · HMI monitoring"
+      },
+      "automation": {
+        "n1t": "Field devices",
+        "n1s": "Sensors · Actuators · VFDs",
+        "n2t": "PLC + Remote I/O",
+        "n2s": "Distributed · Ethernet",
+        "n3t": "Process",
+        "n3s": "HMI · SCADA concepts",
+        "caption": "System design · I/O list · Control strategy"
+      }
+    }
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewDetails": "View details",
+    "close": "Close",
+    "loading": "Loading..."
+  }
+}

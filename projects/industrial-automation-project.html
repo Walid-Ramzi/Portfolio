@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="projects.future.title">Industrial Automation Project — Portfolio</title>
+  <meta name="description" content="A comprehensive industrial automation case study covering system design, component selection, and control strategy for a manufacturing process.">
+  <meta property="og:title" content="Industrial Automation Project — Portfolio">
+  <meta property="og:description" content="A comprehensive industrial automation case study covering system design, component selection, and control strategy for a manufacturing process.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230EA5E9'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='600'%3EE%3C/text%3E%3C/svg%3E">
+  <script>
+    // Applied synchronously, before CSS paints, so the page never flashes
+    // light-then-dark (or dark-then-light) on load.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { /* localStorage unavailable (private mode, etc.) — default to light */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/i18n.js"></script>
+</head>
+<body>
+
+  <header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html#hero">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 15h3M15 15h1"/><circle cx="9" cy="9" r="1"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Kachour Walid-Ramzi</span><span class="brand-title">Instrumentation &amp; Automation Engineer</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+      <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a href="../index.html#projects" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a href="../index.html#education" data-i18n="nav.education">Education</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="../assets/cv.pdf" class="btn btn-filled btn-small" download data-i18n="nav.downloadCV">Download CV</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-selector-wrap">
+        <label for="languageSelector" class="visually-hidden" data-i18n="language.selector">Language</label>
+        <select id="languageSelector" class="lang-select" aria-label="Select language">
+          <option value="en" data-i18n="language.en">English</option>
+          <option value="fr" data-i18n="language.fr">Français</option>
+          <option value="ar" data-i18n="language.ar">العربية</option>
+        </select>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="theme-toggle-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="theme-toggle-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="hamburger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav">
+  <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+  <a href="../index.html#about" data-i18n="nav.about">About</a>
+  <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+  <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+  <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+  <a href="../index.html#education" data-i18n="nav.education">Education</a>
+  <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+  <a href="../assets/cv.pdf" class="btn btn-filled" download data-i18n="nav.downloadCV">Download CV</a>
+</nav>
+
+<main>
+
+    <div class="container breadcrumb-wrap">
+      <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Home</a> / <a href="../index.html#projects" data-i18n="nav.projects">Projects</a> / <span data-i18n="projects.future.breadcrumb">Industrial Automation Project</span></nav>
+    </div>
+
+    <section class="project-detail-header">
+      <div class="container">
+        <p class="section-kicker" data-i18n="projects.future.eyebrow">Automation · System Design · Control Strategy</p>
+        <h1 data-i18n="projects.future.title">Industrial Automation Project</h1>
+        <div class="project-detail-meta">
+          <span class="tag">Automation</span>
+          <span class="tag">System Design</span>
+          <span class="tag">Control Strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="project-detail-hero fade-in">
+        <div class="detail-visual">
+          <div class="detail-visual-grid">
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.automation.n1t">Field devices</strong><span data-i18n="projectDetail.diagram.automation.n1s">Sensors · Actuators · VFDs</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node primary"><strong data-i18n="projectDetail.diagram.automation.n2t">PLC + Remote I/O</strong><span data-i18n="projectDetail.diagram.automation.n2s">Distributed · Ethernet</span></div>
+            <div class="detail-arrow" aria-hidden="true">→</div>
+            <div class="detail-node"><strong data-i18n="projectDetail.diagram.automation.n3t">Process</strong><span data-i18n="projectDetail.diagram.automation.n3s">HMI · SCADA concepts</span></div>
+          </div>
+          <div style="height:1px;background:var(--line);margin:20px 0"></div>
+          <div style="text-align:center;font-size:12px;color:var(--muted)" data-i18n="projectDetail.diagram.automation.caption">System design · I/O list · Control strategy</div>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.overview">Project Overview</h2>
+        <p data-i18n="projects.future.detail.overview">This project presents a comprehensive industrial automation case study covering system design, component selection, and control strategy for a manufacturing process. The goal is to demonstrate the ability to architect end-to-end automation solutions from specification through commissioning.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.objectives">Main Objectives</h2>
+        <p data-i18n="projects.future.detail.objective">Design a complete automation system for an industrial process, ensuring reliability, scalability, and ease of maintenance. The system must integrate sensing, control, and actuation while meeting defined production throughput and quality targets.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.summary">Solution</h2>
+        <p data-i18n="projects.future.detail.solution">A modular control architecture was designed using PLC-based logic with distributed I/O, centralized HMI for operator interaction, and networked communication between system stations. The control strategy combines sequence control for batch operations with continuous regulation for ongoing processes.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.technologies">Technologies Used</h2>
+        <div class="tech-list">
+          <span class="tag">PLC Programming</span>
+          <span class="tag">System Design</span>
+          <span class="tag">HMI</span>
+          <span class="tag">Industrial Network</span>
+          <span class="tag">Control Strategy</span>
+          <span class="tag">SCADA Concepts</span>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.systemComponents">System Components</h2>
+        <ul class="component-list">
+          <li data-i18n="projectDetail.automationComponents.0">Central PLC with distributed remote I/O stations</li>
+          <li data-i18n="projectDetail.automationComponents.1">HMI touchscreen panel</li>
+          <li data-i18n="projectDetail.automationComponents.2">Industrial Ethernet communication network</li>
+          <li data-i18n="projectDetail.automationComponents.3">Proximity and photoelectric sensors</li>
+          <li data-i18n="projectDetail.automationComponents.4">Variable frequency drives for motor control</li>
+          <li data-i18n="projectDetail.automationComponents.5">Pneumatic and hydraulic actuators</li>
+          <li data-i18n="projectDetail.automationComponents.6">Safety relay circuit</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.development">Development Process</h2>
+        <p data-i18n="projects.future.detail.approach">The project followed a systems engineering approach: functional specification, control system architecture design, I/O list compilation, P&ID development, PLC program structure planning, and factory acceptance testing. Documentation was maintained throughout to support future maintenance and expansion.</p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.learnings">What I Learned</h2>
+        <ul class="results-list">
+          <li data-i18n="projectDetail.automationLearnings.0">Developed a complete automation architecture from requirements specification</li>
+          <li data-i18n="projectDetail.automationLearnings.1">Strengthened understanding of system integration and multi-station coordination</li>
+          <li data-i18n="projectDetail.automationLearnings.2">Gained experience with industrial communication protocols and network design</li>
+          <li data-i18n="projectDetail.automationLearnings.3">Produced comprehensive technical documentation for system commissioning</li>
+        </ul>
+      </div>
+
+      <div class="project-detail-section">
+        <h2 data-i18n="projectDetail.gallery">Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.automation.0">System Architecture Diagram</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.automation.1">I/O List — Sensor &amp; Actuator Map</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.automation.2">PLC — Program Structure</div>
+          <div class="gallery-item" data-i18n="projectDetail.galleryItems.automation.3">HMI — Overview Screen</div>
+        </div>
+      </div>
+
+      <div style="margin: 48px 0;">
+        <a href="../index.html#projects" class="btn btn-outlined" data-i18n="projectDetail.back">← Back to Projects</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name" data-i18n="footer.name">Kachour Walid-Ramzi</span><span class="footer-brand-title">Instrumentation &amp; Automation Engineer</span></div>
+    <nav class="footer-links">
+      <a href="../index.html#about" data-i18n="footer.links.about">About</a>
+      <a href="../index.html#skills" data-i18n="footer.links.skills">Skills</a>
+      <a href="../index.html#projects" data-i18n="footer.links.projects">Projects</a>
+      <a href="../assets/cv.pdf" download data-i18n="footer.links.cv">CV</a>
+      <a href="../index.html#contact" data-i18n="footer.links.contact">Contact</a>
+    </nav>
+    <div class="footer-social"><a href="https://linkedin.com" target="_blank">in</a><a href="https://github.com" target="_blank">GH</a><a href="mailto:kachourwalidramzi@gmail.com">@</a></div>
+    <div class="footer-bottom" data-i18n="footer.copyright">2026 Kachour Walid-Ramzi. All rights reserved.</div>
+  </div>
+</footer>
+
+  <script src="../js/main.js"></script>
+</body>

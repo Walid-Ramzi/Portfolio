@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="projects.coopmaster.title">CoopMaster - Smart Connected Poultry Coop</title>
+  <meta name="description" content="CoopMaster smart connected poultry coop project.">
+  <script>
+    // Applied synchronously, before CSS paints, so the page never flashes
+    // light-then-dark (or dark-then-light) on load.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { /* localStorage unavailable (private mode, etc.) — default to light */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/i18n.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html#hero">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 15h3M15 15h1"/><circle cx="9" cy="9" r="1"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Kachour Walid-Ramzi</span><span class="brand-title">Instrumentation &amp; Automation Engineer</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+      <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+      <a href="../index.html#projects" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+      <a href="../index.html#education" data-i18n="nav.education">Education</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="../assets/cv.pdf" class="btn btn-filled btn-small" download data-i18n="nav.downloadCV">Download CV</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-selector-wrap">
+        <label for="languageSelector" class="visually-hidden" data-i18n="language.selector">Language</label>
+        <select id="languageSelector" class="lang-select" aria-label="Select language">
+          <option value="en" data-i18n="language.en">English</option>
+          <option value="fr" data-i18n="language.fr">Français</option>
+          <option value="ar" data-i18n="language.ar">العربية</option>
+        </select>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="theme-toggle-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="theme-toggle-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="hamburger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav">
+  <a href="../index.html#hero" data-i18n="nav.home">Home</a>
+  <a href="../index.html#about" data-i18n="nav.about">About</a>
+  <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+  <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+  <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+  <a href="../index.html#education" data-i18n="nav.education">Education</a>
+  <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+  <a href="../assets/cv.pdf" class="btn btn-filled" download data-i18n="nav.downloadCV">Download CV</a>
+</nav>
+<main>
+<div class="container breadcrumb-wrap">
+  <nav class="breadcrumb"><a href="../index.html" data-i18n="nav.home">Home</a> / <a href="../index.html#projects" data-i18n="nav.projects">Projects</a> / CoopMaster</nav>
+</div>
+<section class="project-detail-header">
+  <div class="container">
+    <p class="section-kicker" data-i18n="projects.coopmaster.eyebrow">PFE - IoT - Embedded</p>
+    <h1 data-i18n="projects.coopmaster.title">CoopMaster - Smart Connected Poultry Coop</h1>
+    <div class="project-detail-meta">
+      <span class="tag">Raspberry Pi 5</span><span class="tag">Python</span><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Sensors &amp; Actuators</span><span class="tag">Local-First</span>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="project-detail-hero fade-in" role="img" aria-label="CoopMaster system overview">
+    <div class="detail-visual">
+      <div class="detail-visual-grid">
+        <div class="detail-node"><strong>Sensors</strong><span>PIR - Rain - Door State</span></div>
+        <div class="detail-arrow">-></div>
+        <div class="detail-node primary"><strong>Raspberry Pi 5</strong><span>Python - GPIO - Safety</span></div>
+        <div class="detail-arrow">-></div>
+        <div class="detail-node"><strong>Actuators</strong><span>Door - Pump - Relays</span></div>
+      </div>
+      <div style="height:1px;background:var(--line);margin:20px 0"></div>
+      <div style="text-align:center;font-size:12px;color:var(--muted)">Firebase + Flutter App - Monitoring - Camera</div>
+    </div>
+  </div>
+<section class="project-detail-section"><h2 data-i18n="projectDetail.overview">overview</h2><p data-i18n="projects.coopmaster.detail.overview">CoopMaster is a smart connected poultry-coop automation and monitoring system developed as an engineering graduation project. The objective was to design a low-cost, practical, and reliable solution capable of monitoring important environmental conditions inside a poultry coop while automating several repetitive tasks that normally require manual intervention. The project combines embedded systems, industrial-style automation, sensors, actuators, networking, cloud services, mobile application development, and local safety mechanisms into one integrated system. Rather than treating the poultry coop as a simple IoT demonstration, CoopMaster was designed around an engineering principle: the system should remain useful and safe even when the network or cloud service is unavailable. The system uses a Raspberry Pi 5 as the main local controller, Python for hardware and automation logic, sensors for monitoring, relays and actuators for physical control, Firebase for cloud synchronization, and a Flutter application for remote monitoring.</p></section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.problem">The Problem</h2>
+<p data-i18n="projects.coopmaster.detail.problem.intro">Traditional small poultry coops often require the owner to manually perform several repetitive tasks. Depending on the installation, the owner may need to:</p>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.problem.tasks.0">Check whether the coop door is open or closed</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.1">Open or close the entrance manually</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.2">Monitor environmental conditions</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.3">Check whether rain is occurring before opening an external entrance</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.4">Activate or deactivate watering equipment</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.5">Monitor the general operating state of the installation</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.6">React to abnormal conditions</li>
+<li data-i18n="projects.coopmaster.detail.problem.tasks.7">Visit the coop physically to verify that equipment is operating correctly</li>
+</ul>
+<p data-i18n="projects.coopmaster.detail.problem.challenge">The main challenge was designing a system in which: Sensors provide information → the controller interprets that information → automation logic makes decisions → actuators execute the required actions → the system reports its state to the user. This creates a complete closed-loop automation architecture.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.objectives">Main Objectives</h2>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.objectives.items.0">Environmental and state monitoring — collect information from sensors and determine the current state</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.1">Automatic door management — open and close the entrance automatically according to predefined conditions</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.2">Rain-aware operation — detect rain conditions and use this information to avoid inappropriate door operation</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.3">Motion detection — use a PIR sensor to detect movement in the monitored area</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.4">Watering control — control a water pump to activate watering-related equipment without direct manual operation</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.5">Remote monitoring — monitor through a graphical mobile interface</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.6">Local operation — retain essential functionality when Internet connectivity is unavailable</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.7">Safety — avoid blindly commanding actuators without verifying the state of the installation</li>
+<li data-i18n="projects.coopmaster.detail.objectives.items.8">Low-cost implementation — use accessible and relatively inexpensive components while applying engineering principles</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.architecture">System Architecture</h2>
+<p data-i18n="projects.coopmaster.detail.architecture.intro">CoopMaster is organized into several interconnected layers.</p>
+<div class="info-card"><h3>1. Physical Layer</h3><p>Contains the real-world sensors and actuators. Sensors transform physical events into electrical signals that can be interpreted by the controller.</p></div>
+<div class="info-card"><h3>2. Control Layer</h3><p>The Raspberry Pi 5 acts as the main local controller. It reads sensor inputs, processes sensor states, executes automation rules, controls actuators, monitors equipment states, handles local safety logic, communicates with the cloud layer, and provides information to the user interface.</p></div>
+<div class="info-card"><h3>3. Software Layer</h3><p>The local control software was developed using Python. The raw GPIO states are converted into meaningful logical information.</p></div>
+<div class="info-card"><h3>4. Actuator Layer</h3><p>The controller communicates with physical actuators through appropriate switching interfaces. Relay interfaces separate low-power control signals from higher-power actuator circuits.</p></div>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.gpioConfig">GPIO Configuration</h2>
+<p data-i18n="projects.coopmaster.detail.gpio.intro">An important aspect of the prototype was defining a clear mapping between the Raspberry Pi GPIO pins and the physical devices.</p>
+<table class="tech-table"><thead><tr>
+<th>GPIO</th>
+<th>Device</th>
+<th>Function</th>
+</tr></thead><tbody>
+<tr>
+<td>GPIO 5</td>
+<td>PIR sensor</td>
+<td>Motion detection</td>
+</tr>
+<tr>
+<td>GPIO 8</td>
+<td>Rain sensor</td>
+<td>Rain detection</td>
+</tr>
+<tr>
+<td>GPIO 7</td>
+<td>Door relay</td>
+<td>Door opening command</td>
+</tr>
+<tr>
+<td>GPIO 11</td>
+<td>Door relay</td>
+<td>Door closing command</td>
+</tr>
+<tr>
+<td>GPIO 25</td>
+<td>Door state sensor</td>
+<td>Position/state feedback</td>
+</tr>
+<tr>
+<td>GPIO 9</td>
+<td>Door state sensor</td>
+<td>Position/state feedback</td>
+</tr>
+<tr>
+<td>GPIO 10</td>
+<td>Water control</td>
+<td>Watering control signal</td>
+</tr>
+<tr>
+<td>GPIO 24</td>
+<td>Pump</td>
+<td>Pump activation</td>
+</tr>
+</tbody></table>
+<p>The exact electrical implementation is separated from the software logic through the GPIO abstraction, making it easier to change hardware later.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.doorAutomation">Door Automation</h2>
+<p data-i18n="projects.coopmaster.detail.doorAutomation.intro">One of the main functions of CoopMaster is automated door control. The door system is not treated as a simple OPEN = motor ON logic.</p>
+<ol class="component-list">
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.0">User/automation requests OPEN</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.1">Controller verifies current state</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.2">Opening relay activated</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.3">Motor moves door</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.4">Position sensor provides feedback</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.5">Controller detects target state</li>
+<li data-i18n="projects.coopmaster.detail.doorAutomation.flow.6">Motor command stopped</li>
+</ol>
+<p data-i18n="projects.coopmaster.detail.doorAutomation.note">This feedback-based architecture is important because an automation controller should ideally know whether the commanded action actually occurred.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.safety">Door Safety Logic</h2>
+<p data-i18n="projects.coopmaster.detail.safety.intro">Safety was one of the most important design considerations. A naive implementation could simply activate a motor for a fixed amount of time, but this creates several problems.</p>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.safety.states.0">Requested state</li>
+<li data-i18n="projects.coopmaster.detail.safety.states.1">Commanded state</li>
+<li data-i18n="projects.coopmaster.detail.safety.states.2">Feedback state</li>
+<li data-i18n="projects.coopmaster.detail.safety.states.3">Actual operating condition</li>
+</ul>
+<p data-i18n="projects.coopmaster.detail.safety.approach">Instead of relying only on time, the system uses sensor information to determine whether the door has reached its intended state. This represents an important transition from simple remote control toward feedback-based automation.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.rainDetection">Rain Detection</h2>
+<p data-i18n="projects.coopmaster.detail.rainDetection.intro">The rain sensor provides information about the external environmental condition. The controller can use this information as part of the automation decision. Conceptually: Rain sensor → Raspberry Pi → Automation logic → Door decision.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.motionDetection">Motion Detection</h2>
+<p data-i18n="projects.coopmaster.detail.motionDetection.intro">A PIR sensor is used to detect movement. The sensor is connected to GPIO 5. The PIR signal allows the controller to determine whether motion has been detected in the monitored area.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.pumpControl">Water Pump Control</h2>
+<p data-i18n="projects.coopmaster.detail.pumpControl.intro">CoopMaster also includes control of a watering system. The water-related control path uses: Controller → switching interface → pump. The pump can therefore be activated by software rather than requiring direct manual switching.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.localFirst">Local-First Architecture</h2>
+<p data-i18n="projects.coopmaster.detail.localFirst.intro">One of the strongest engineering concepts in CoopMaster is its local-first architecture. Many IoT projects depend heavily on cloud services. If the Internet connection disappears, critical automation may stop functioning.</p>
+<p>Cloud-dependent path: <code>Sensor → Internet → Cloud → Application → Internet → Controller → Actuator</code></p>
+<p>CoopMaster local path: <code>Sensor → Raspberry Pi → Local automation → Actuator</code></p>
+<h3>Critical local functions</h3><ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.critical.0">Sensor reading</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.critical.1">Automation logic</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.critical.2">Door control</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.critical.3">Pump control</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.critical.4">Safety logic</li>
+</ul>
+<h3>Connected functions</h3><ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.connected.0">Remote monitoring</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.connected.1">Data synchronization</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.connected.2">User interface</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.connected.3">Remote interaction</li>
+<li data-i18n="projects.coopmaster.detail.localFirst.separation.connected.4">Cloud-based information storage</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.firebase">Firebase Integration</h2>
+<p data-i18n="projects.coopmaster.detail.firebase.intro">Firebase is used as the cloud connectivity layer. The Raspberry Pi communicates relevant system information to the cloud, while the Flutter application can use that information to provide the user with a remote view of the installation.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.flutter">Flutter Mobile Application</h2>
+<p data-i18n="projects.coopmaster.detail.flutter.intro">A dedicated application was developed using Flutter. The application provides a graphical interface for interacting with the CoopMaster system. Instead of requiring the user to understand GPIO states, relay states, or Python processes, the application translates the technical information into a more understandable interface.</p>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.flutter.features.0">System status — a quick overview of the current installation state</li>
+<li data-i18n="projects.coopmaster.detail.flutter.features.1">Door control — the user can request opening or closing</li>
+<li data-i18n="projects.coopmaster.detail.flutter.features.2">Sensor information</li>
+<li data-i18n="projects.coopmaster.detail.flutter.features.3">Equipment status</li>
+<li data-i18n="projects.coopmaster.detail.flutter.features.4">Remote monitoring</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.comms">Hardware-to-Software Communication</h2>
+<p data-i18n="projects.coopmaster.detail.comms.intro">One of the most important aspects of CoopMaster is the complete communication chain between the physical world and the software. For example, consider the rain sensor:</p>
+<ol class="component-list">
+<li data-i18n="projects.coopmaster.detail.comms.chain.0">Physical event — Rain begins</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.1">Sensor — The rain sensor changes its electrical state</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.2">Raspberry Pi — The GPIO input detects the change</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.3">Python — The Python control program interprets the signal</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.4">Automation logic — The system determines what action should be taken</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.5">Actuator — The relevant relay/motor state is controlled</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.6">Firebase — The updated state can be synchronized</li>
+<li data-i18n="projects.coopmaster.detail.comms.chain.7">Flutter — The user can see the updated condition in the application</li>
+</ol>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.engineering">Engineering Control Philosophy</h2>
+<p data-i18n="projects.coopmaster.detail.engineering.intro">Although CoopMaster is a small-scale project, its architecture follows principles found in industrial automation. The fundamental chain is: SENSOR → CONTROLLER → ACTUATOR.</p>
+<p data-i18n="projects.coopmaster.detail.engineering.understanding">The project demonstrates an understanding that automation is not simply about writing code or switching a motor. It requires understanding the relationship between physical processes, sensors, electrical signals, controllers, actuators, feedback, communication, safety, and user interfaces.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.instrumentation">Instrumentation Perspective</h2>
+<p data-i18n="projects.coopmaster.detail.instrumentation.intro">From an instrumentation perspective, CoopMaster can be viewed as a small process-control installation. The physical environment represents the process. Sensors provide measurements or states. The Raspberry Pi acts as the control unit. Relays and motors provide the actuation layer. The Flutter application acts as the supervisory/user interface. Firebase provides the communication and remote data layer.</p>
+<p data-i18n="projects.coopmaster.detail.instrumentation.architecture">PROCESS → SENSORS → SIGNAL ACQUISITION → CONTROLLER → CONTROL LOGIC → ACTUATORS → PROCESS, with an additional monitoring path: CONTROLLER → CLOUD → USER APPLICATION.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.safetyPhilosophy">Safety Philosophy</h2>
+<p data-i18n="projects.coopmaster.detail.safetyPhilosophy.intro">Safety was considered at both the software and system levels. The system should not assume that a command was successfully executed simply because a command was sent.</p>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.safetyPhilosophy.states.0">Requested state</li>
+<li data-i18n="projects.coopmaster.detail.safetyPhilosophy.states.1">Commanded state</li>
+<li data-i18n="projects.coopmaster.detail.safetyPhilosophy.states.2">Feedback state</li>
+<li data-i18n="projects.coopmaster.detail.safetyPhilosophy.states.3">Actual operating condition</li>
+</ul>
+<p data-i18n="projects.coopmaster.detail.safetyPhilosophy.distinction">Command: CLOSE DOOR does not automatically mean Door = CLOSED. The system should use feedback to determine the actual state. This distinction between commanded state and actual state is an important engineering concept.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.fault">Fault and Connectivity Considerations</h2>
+<p data-i18n="projects.coopmaster.detail.fault.intro">A major consideration in the architecture was the possibility of communication failure. Internet connectivity can be interrupted for many reasons. Therefore, critical local functions should not depend on constant cloud availability.</p>
+<p><strong>Cloud failure:</strong> <span data-i18n="projects.coopmaster.detail.fault.cloudFailure">Remote monitoring may be temporarily unavailable, but the local automation can continue.</span></p>
+<p><strong>Local failure:</strong> <span data-i18n="projects.coopmaster.detail.fault.localFailure">This is more serious because the controller is responsible for physical automation.</span></p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.raspberryPi">Why Raspberry Pi?</h2>
+<p data-i18n="projects.coopmaster.detail.raspberryPi.intro">The Raspberry Pi 5 was selected as the main controller because it provides a useful balance between processing capability, GPIO access, Linux environment, Python compatibility, networking, development flexibility, low cost, and availability.</p>
+<p data-i18n="projects.coopmaster.detail.raspberryPi.distinction">A Raspberry Pi is not automatically equivalent to an industrial PLC. A PLC is designed specifically for industrial environments, deterministic control, electrical robustness, maintenance, and industrial communication.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.technologies">Technologies Used</h2>
+<h3>Hardware</h3><ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.0">Raspberry Pi 5</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.1">PIR motion sensor</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.2">Rain sensor</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.3">Door-position/state sensors</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.4">Relay modules</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.5">Door motor/actuator</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.6">Water pump</li>
+<li data-i18n="projects.coopmaster.detail.technologies.hardware.7">Electrical wiring and power interfaces</li>
+</ul>
+<h3>Software</h3><ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.technologies.software.0">Python</li>
+<li data-i18n="projects.coopmaster.detail.technologies.software.1">Flutter</li>
+<li data-i18n="projects.coopmaster.detail.technologies.software.2">Firebase</li>
+<li data-i18n="projects.coopmaster.detail.technologies.software.3">GPIO-based hardware control</li>
+<li data-i18n="projects.coopmaster.detail.technologies.software.4">Linux/Raspberry Pi environment</li>
+</ul>
+<h3>Concepts</h3><ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.0">Embedded systems</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.1">Automation</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.2">Instrumentation</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.3">Sensor acquisition</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.4">Actuator control</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.5">Feedback</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.6">IoT</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.7">Cloud synchronization</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.8">Local-first architecture</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.9">Remote monitoring</li>
+<li data-i18n="projects.coopmaster.detail.technologies.concepts.10">Safety-oriented control</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.development">Development Process</h2>
+<p data-i18n="projects.coopmaster.detail.development.intro">The project was approached as an integrated engineering system rather than as isolated software and hardware tasks.</p>
+<ol class="component-list">
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.0.step">Step 1 — Identify the problem</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.0.desc">The first stage involved identifying repetitive manual operations that could benefit from automation.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.1.step">Step 2 — Define the system architecture</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.1.desc">The hardware and software components were organized into separate layers.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.2.step">Step 3 — Hardware integration</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.2.desc">The sensors and actuators were connected to the Raspberry Pi GPIO system.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.3.step">Step 4 — Develop the local controller</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.3.desc">Python was used to implement the local automation logic.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.4.step">Step 5 — Implement automation logic</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.4.desc">The automation rules were implemented so that sensor information could influence actuator behavior.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.5.step">Step 6 — Add cloud communication</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.5.desc">Firebase was integrated to synchronize system information and enable remote access.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.6.step">Step 7 — Develop the Flutter application</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.6.desc">A user interface was created to make the system understandable to a non-technical user.</small></li>
+<li><strong data-i18n="projects.coopmaster.detail.development.steps.7.step">Step 8 — Testing and refinement</strong><br><small data-i18n="projects.coopmaster.detail.development.steps.7.desc">The system was tested by observing the interaction between all components.</small></li>
+</ol>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.challenges">Challenges</h2>
+<p data-i18n="projects.coopmaster.detail.challenges.intro">The project involved several engineering challenges.</p>
+<ul class="component-list">
+<li><strong data-i18n="projects.coopmaster.detail.challenges.items.0.title">Hardware/software integration</strong> Working with physical hardware introduces problems that do not exist in purely software projects.</li>
+<li><strong data-i18n="projects.coopmaster.detail.challenges.items.1.title">Actuator control</strong> Motors and pumps cannot be connected directly to Raspberry Pi GPIO pins.</li>
+<li><strong data-i18n="projects.coopmaster.detail.challenges.items.2.title">Feedback</strong> Controlling a motor is relatively simple. Knowing when to stop it safely is more complicated.</li>
+<li><strong data-i18n="projects.coopmaster.detail.challenges.items.3.title">Connectivity</strong> Cloud-based systems introduce network dependency.</li>
+<li><strong data-i18n="projects.coopmaster.detail.challenges.items.4.title">Multiple technologies</strong> CoopMaster combines several technologies: Python + Raspberry Pi + GPIO + Firebase + Flutter.</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.learned">What I Learned</h2>
+<p data-i18n="projects.coopmaster.detail.learned.intro">CoopMaster provided practical experience across several engineering areas.</p>
+<ul class="component-list">
+<li><strong data-i18n="projects.coopmaster.detail.learned.areas.0.title">Instrumentation</strong> The project strengthened understanding of sensors, signal acquisition, digital inputs, equipment states, feedback, and measurement systems.</li>
+<li><strong data-i18n="projects.coopmaster.detail.learned.areas.1.title">Automation</strong> The project introduced practical experience with control logic, sequential operations, interlocks, feedback, actuator control, and state-based automation.</li>
+<li><strong data-i18n="projects.coopmaster.detail.learned.areas.2.title">Embedded systems</strong> The project provided experience with Raspberry Pi, GPIO, hardware interfaces, sensor integration, relay control, and physical debugging.</li>
+<li><strong data-i18n="projects.coopmaster.detail.learned.areas.3.title">Software engineering</strong> The project involved Python development, Flutter development, application architecture, hardware/software communication, and cloud integration.</li>
+<li><strong data-i18n="projects.coopmaster.detail.learned.areas.4.title">IoT</strong> The project demonstrated the complete IoT pipeline: Physical world → sensors → local processing → cloud → application.</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.skills">Engineering Skills Demonstrated</h2>
+<p data-i18n="projects.coopmaster.detail.skills.intro">CoopMaster demonstrates practical experience in:</p>
+<ul class="component-list">
+<li data-i18n="projects.coopmaster.detail.skills.items.0">Embedded control</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.1">Sensor integration</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.2">Actuator control</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.3">GPIO programming</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.4">Python</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.5">Raspberry Pi</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.6">Flutter</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.7">Firebase</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.8">IoT architecture</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.9">Remote monitoring</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.10">Feedback-based control</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.11">Relay control</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.12">Hardware/software integration</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.13">Local-first architecture</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.14">System troubleshooting</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.15">Automation logic</li>
+<li data-i18n="projects.coopmaster.detail.skills.items.16">Technical system design</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.summary">Project Architecture Summary</h2>
+<p data-i18n="projects.coopmaster.detail.summary.intro">The complete system can be summarized as:</p>
+<ol class="component-list">
+<li data-i18n="projects.coopmaster.detail.summary.flow.0">Sensors (PIR, Rain, Door state)</li>
+<li data-i18n="projects.coopmaster.detail.summary.flow.1">Raspberry Pi 5 (GPIO acquisition, Python logic, Automation, Safety logic)</li>
+<li data-i18n="projects.coopmaster.detail.summary.flow.2">Actuators (Door motor, Water pump, Relays)</li>
+<li data-i18n="projects.coopmaster.detail.summary.flow.3">Firebase (Synchronizing, Remote data)</li>
+<li data-i18n="projects.coopmaster.detail.summary.flow.4">Flutter App (Monitoring, Controls, Status)</li>
+</ol>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.controlFlow">Local-First Control Flow</h2>
+<p data-i18n="projects.coopmaster.detail.controlFlow.intro">The most important control path is the local loop:</p>
+<h3>Local Flow</h3><ol class="component-list">
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.0">Sensor</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.1">GPIO</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.2">Raspberry Pi</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.3">Python</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.4">Automation Logic</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.5">Safety / State Verification</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.6">Relay</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.7">Actuator</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.8">Physical Process</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.9">Feedback Sensor</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.localFlow.10">Raspberry Pi</li>
+</ol>
+<h3>Cloud Path</h3><ol class="component-list">
+<li data-i18n="projects.coopmaster.detail.controlFlow.cloudFlow.0">Raspberry Pi</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.cloudFlow.1">Firebase</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.cloudFlow.2">Flutter App</li>
+<li data-i18n="projects.coopmaster.detail.controlFlow.cloudFlow.3">User</li>
+</ol>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.portfolio">Portfolio Case Study</h2>
+<p data-i18n="projects.coopmaster.detail.portfolio.intro">CoopMaster represents the type of project that demonstrates more than theoretical knowledge. It combines several disciplines into one working system.</p>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.future">Future Improvements</h2>
+<p data-i18n="projects.coopmaster.detail.future.intro">Although the prototype successfully demonstrates the core concept, several improvements could make the system more robust.</p>
+<ul class="component-list">
+<li><strong data-i18n="projects.coopmaster.detail.future.items.0.title">Industrial controller migration</strong> The Raspberry Pi could eventually be replaced or complemented by an industrial PLC.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.1.title">ESP32-C3 version</strong> A future version could use an ESP32-C3 for selected sensor/actuator tasks.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.2.title">Improved industrial communication</strong> Future versions could investigate Modbus RTU, Modbus TCP, MQTT, RS-485, and Industrial Ethernet.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.3.title">More sensors</strong> Additional sensors could monitor temperature, humidity, water level, feed level, light level, electrical consumption, and motor current.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.4.title">Historical data</strong> Firebase or another database could store long-term measurements.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.5.title">Alarm management</strong> A future version could introduce an alarm system for abnormal conditions.</li>
+<li><strong data-i18n="projects.coopmaster.detail.future.items.6.title">Predictive maintenance</strong> With enough historical data, the system could identify abnormal equipment behavior.</li>
+</ul>
+</section>
+<section class="project-detail-section">
+<h2 data-i18n="projectDetail.finalSummary">Final Project Summary</h2>
+<p data-i18n="projects.coopmaster.detail.finalSummary.text">CoopMaster is a connected smart poultry-coop automation system designed to demonstrate how embedded electronics, instrumentation, automation, cloud technologies, and software development can be combined to solve a practical real-world problem. The most important architectural decision is the use of a local-first control philosophy.</p>
+</section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><span class="footer-brand-name" data-i18n="footer.name">Kachour Walid-Ramzi</span><span class="footer-brand-title">Instrumentation &amp; Automation Engineer</span></div>
+    <nav class="footer-links">
+      <a href="../index.html#about" data-i18n="footer.links.about">About</a>
+      <a href="../index.html#skills" data-i18n="footer.links.skills">Skills</a>
+      <a href="../index.html#projects" data-i18n="footer.links.projects">Projects</a>
+      <a href="../assets/cv.pdf" download data-i18n="footer.links.cv">CV</a>
+      <a href="../index.html#contact" data-i18n="footer.links.contact">Contact</a>
+    </nav>
+    <div class="footer-social"><a href="https://linkedin.com" target="_blank">in</a><a href="https://github.com" target="_blank">GH</a><a href="mailto:kachourwalidramzi@gmail.com">@</a></div>
+    <div class="footer-bottom" data-i18n="footer.copyright">2026 Kachour Walid-Ramzi. All rights reserved.</div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
