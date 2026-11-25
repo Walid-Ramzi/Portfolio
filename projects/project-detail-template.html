@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="myProject.title">[Project Title]</title>
+  <meta name="description" content="Project page template.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="[Project Title] — Portfolio">
+  <meta property="og:description" content="Project page template.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://walid-ramzi.github.io/Portfolio/projects/project-detail-template.html">
+  <meta property="og:image" content="https://walid-ramzi.github.io/Portfolio/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1322" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230EA5E9'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='600'%3EE%3C/text%3E%3C/svg%3E">
+  <script>
+    // Applied synchronously, before CSS paints, so the page never flashes
+    // light-then-dark (or dark-then-light) on load.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { /* localStorage unavailable — default to light */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="../../../css/styles.css">
+  <script src="../../../js/i18n.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Skip to main content</a>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="../../../index.html#hero" aria-label="Kachour Walid-Ramzi home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="3" />
+            <path d="M8 9h8M8 15h3M15 15h1" />
+            <circle cx="9" cy="9" r="1" />
+          </svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">Kachour Walid-Ramzi</span><span class="brand-title"
+            data-i18n="hero.kicker">Instrumentation & Automation Engineer</span></span>
+      </a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="../../../index.html#hero" data-i18n="nav.home">Home</a>
+        <a href="../../../index.html#about" data-i18n="nav.about">About</a>
+        <a href="../../../index.html#skills" data-i18n="nav.skills">Skills</a>
+        <a href="../../../index.html#projects" class="active" data-i18n="nav.projects">Projects</a>
+        <a href="../../../index.html#experience" data-i18n="nav.experience">Experience</a>
+        <a href="../../../index.html#education" data-i18n="nav.education">Education</a>
+        <a href="../../../index.html#contact" data-i18n="nav.contact">Contact</a>
+        <a href="../../../assets/cv.pdf" class="btn btn-filled btn-small" download data-i18n="nav.downloadCV">Download CV</a>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-selector-wrap">
+          <label for="languageSelector" class="visually-hidden" data-i18n="language.selector">Language</label>
+          <select id="languageSelector" class="lang-select" aria-label="Select language">
+            <option value="en" data-i18n="language.en">English</option>
+            <option value="fr" data-i18n="language.fr">Français</option>
+            <option value="ar" data-i18n="language.ar">العربية</option>
+          </select>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme"
+          aria-pressed="false">
+          <svg class="theme-toggle-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" />
+          </svg>
+          <svg class="theme-toggle-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" />
+          </svg>
+        </button>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" type="button"><svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg></button>
+      </div>
+    </div>
+  </header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="../../../index.html#hero" data-i18n="nav.home">Home</a>
+    <a href="../../../index.html#about" data-i18n="nav.about">About</a>
+    <a href="../../../index.html#skills" data-i18n="nav.skills">Skills</a>
+    <a href="../../../index.html#projects" data-i18n="nav.projects">Projects</a>
+    <a href="../../../index.html#experience" data-i18n="nav.experience">Experience</a>
+    <a href="../../../index.html#education" data-i18n="nav.education">Education</a>
+    <a href="../../../index.html#contact" data-i18n="nav.contact">Contact</a>
+    <a href="../../../assets/cv.pdf" class="btn btn-filled" download data-i18n="nav.downloadCV">Download CV</a>
+  </nav>
+
+<main id="main" tabindex="-1">
+<!--
+  PROJECT PAGE TEMPLATE — see projects/TEMPLATE-GUIDE.md for the full walkthrough.
+
+  1. Copy this file to projects/project_details/<category>/<your-project>.html
+     (it is already written for that depth: assets use ../../../).
+  2. Search for "myProject" and rename that key prefix (e.g. classicProject.my-slug) everywhere.
+  3. Add the keys to js/i18n/en.json, fr.json and ar.json (snippet in the guide).
+  4. Replace PROJECT_VIDEO_ID with the YouTube ID, or delete the video block.
+  5. Add the project card to the category page and (optional) the sitemap.
+  Until the keys exist, the English text written here is shown instead.
+-->
+<div class="container breadcrumb-wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../../index.html" data-i18n="nav.home">Home</a> / <a href="../../../index.html#projects" data-i18n="nav.projects">Projects</a> / <a href="../../classic-control.html" data-i18n="classicProject.common.classicControl">Classic Control</a> / <span aria-current="page" data-i18n="myProject.title">[Project Title]</span></nav></div>
+    <section class="project-detail-header">
+      <div class="container">
+        <p class="section-kicker" data-i18n="myProject.eyebrow">[Project category · Software · Topic]</p>
+        <h1 data-i18n="myProject.title">[Project Title]</h1>
+        <div class="project-detail-meta"><span class="tag" data-i18n="myProject.tag1">Tag one</span><span class="tag" data-i18n="myProject.tag2">Tag two</span></div>
+      </div>
+    </section>
+    <div class="container">
+    <section class="project-detail-section" aria-labelledby="h-overview">
+      <h2 id="h-overview" data-i18n="classicProject.common.overview">Project Overview</h2>
+      <p data-i18n="myProject.overview">Describe what the project is, its purpose and the control problem it demonstrates.</p>
+    </section>
+    <section class="project-detail-section" aria-labelledby="h-principle">
+      <h2 id="h-principle" data-i18n="classicProject.common.principle">Operating Principle</h2>
+      <p data-i18n="myProject.explain">Explain how it works, step by step, using only what your source files support.</p>
+    </section>
+    <section class="project-detail-section" aria-labelledby="h-circuit">
+      <h2 id="h-circuit" data-i18n="classicProject.common.circuit">Control Circuit</h2>
+      <figure class="schematic-figure"><div class="schematic-frame">
+        <!-- Replace the placeholder with: <a href="IMAGE_URL" target="_blank" rel="noopener"><img src="IMAGE_URL" alt="Describe the diagram" width="1600" height="900" loading="lazy"></a> -->
+        <div class="schematic-placeholder"><strong data-i18n="classicProject.common.schematicTitle">Schematic image coming soon</strong><span data-i18n="classicProject.common.schematicHint">The exported CADe SIMU schematic will appear here.</span></div></div></figure>
+      <p data-i18n="myProject.diagram">Describe the diagram or image shown above.</p>
+    </section>
+    <section class="project-detail-section" aria-labelledby="h-components">
+      <h2 id="h-components" data-i18n="classicProject.common.components">Main Components</h2>
+      <ul class="component-list component-list--cols"><li><span data-i18n="myProject.comp1">Component name — what it does</span></li><li><span data-i18n="myProject.comp2">Component name — what it does</span></li></ul>
+    </section>
+    <section class="project-detail-section" aria-labelledby="h-simulation">
+      <h2 id="h-simulation" data-i18n="classicProject.common.simulation">Simulation and Software</h2>
+      <!-- VIDEO: replace PROJECT_VIDEO_ID. Keep the wrapper so the embed stays 16:9 and responsive. -->
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/PROJECT_VIDEO_ID?rel=0" title="Project video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <p class="video-note" data-i18n="myProject.videoNote">One line describing the video.</p>
+      <div class="tech-list sim-tags"><span class="tag">CADe SIMU</span></div>
+    </section>
+    <section class="project-detail-section" aria-labelledby="h-notes">
+      <h2 id="h-notes" data-i18n="classicProject.common.notes">Technical Notes</h2>
+      <div class="detail-callout "><p data-i18n="myProject.note">Limitations, observations and educational notes.</p></div>
+    </section>
+    <div class="container-narrow back-link-row">
+      <a href="../../classic-control.html" class="btn btn-outlined"><svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H6M11 6l-6 6 6 6"/></svg><span data-i18n="classicProject.common.back">Back to Classic Control</span></a>
+    </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+      <div><span class="footer-brand-name" data-i18n="footer.name">Kachour Walid-Ramzi</span><span
+          class="footer-brand-title" data-i18n="footer.title">Instrumentation &amp; Automation Engineer</span></div>
+      <nav class="footer-links"><a href="../../../index.html#about" data-i18n="footer.links.about">About</a><a href="../../../index.html#skills"
+          data-i18n="footer.links.skills">Skills</a><a href="../../../index.html#projects" data-i18n="footer.links.projects">Projects</a><a
+          href="../../../assets/cv.pdf" download data-i18n="footer.links.cv">CV</a><a href="../../../index.html#contact"
+          data-i18n="footer.links.contact">Contact</a></nav>
+      <div class="footer-social"><a href="https://linkedin.com" target="_blank" rel="noopener"
+          aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg></a><a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.2-.3-2.5-1-3.5.3-1.2.3-2.4 0-3.5 0 0-1 0-3 1.5-2.6-.5-5.4-.5-8 0C6 2 5 2 5 2c-.3 1.2-.3 2.4 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.4.5-.7 1.1-.8 1.7-.2.6-.2 1.2-.2 1.8v4" />
+            <path d="M9 18c-4.5 2-5-2-7-2" />
+          </svg></a><a href="mailto:kachourwalidramzi@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-9 6a2 2 0 0 1-2 0L2 7" />
+          </svg></a></div>
+      <div class="footer-bottom" data-i18n="footer.copyright">© 2026 Kachour Walid-Ramzi. All rights reserved.</div>
+    </div>
+  </footer>
+
+<script src="../../../js/main.js"></script>
+</body>
+</html>
